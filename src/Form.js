@@ -50,7 +50,7 @@ const Form = () => {
             {submitted ? (
                 <p className="text-green-500 text-center">Thank you! Your message has been sent.</p>
             ) : (
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="mb-4">
                         <label className="block text-lg font-semibold mb-2 text-white" htmlFor="firstName">First Name:</label>
                         <input
@@ -146,7 +146,7 @@ const Form = () => {
                     </div>
 
                     <button
-                        className="w-full bg-yellow-400 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
+                        className="w-full bg-yellow-400 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition duration-300 focus:ring-2 focus:ring-blue-500"
                         type="submit"
                     >
                         Submit
