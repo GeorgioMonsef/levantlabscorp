@@ -50,108 +50,110 @@ const Form = () => {
             {submitted ? (
                 <p className="text-green-500 text-center">Thank you! Your message has been sent.</p>
             ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="mb-4">
-                        <label className="block text-lg font-semibold mb-2 text-white" htmlFor="firstName">First Name:</label>
-                        <input
-                            className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            type="text"
-                            id="firstName"
-                            placeholder="First name"
-                            value={formData.firstName}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
+                <div className="max-h-[600px] overflow-auto"> {/* Added scrollable container */}
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        <div className="mb-4">
+                            <label className="block text-lg font-semibold mb-2 text-white" htmlFor="firstName">First Name:</label>
+                            <input
+                                className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                type="text"
+                                id="firstName"
+                                placeholder="First name"
+                                value={formData.firstName}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-                    <div className="mb-4">
-                        <label className="block text-lg font-semibold mb-2 text-white" htmlFor="lastName">Last Name:</label>
-                        <input
-                            className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            type="text"
-                            id="lastName"
-                            placeholder="Enter your last name"
-                            value={formData.lastName}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
+                        <div className="mb-4">
+                            <label className="block text-lg font-semibold mb-2 text-white" htmlFor="lastName">Last Name:</label>
+                            <input
+                                className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                type="text"
+                                id="lastName"
+                                placeholder="Enter your last name"
+                                value={formData.lastName}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-                    <div className="mb-4">
-                        <label className="block text-lg font-semibold mb-2 text-white" htmlFor="email">Email:</label>
-                        <input
-                            className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            type="email"
-                            id="email"
-                            placeholder="Enter your email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
+                        <div className="mb-4">
+                            <label className="block text-lg font-semibold mb-2 text-white" htmlFor="email">Email:</label>
+                            <input
+                                className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-                    <div className="mb-4">
-                        <label className="block text-lg font-semibold mb-2 text-white" htmlFor="phone">Phone Number:</label>
-                        <input
-                            className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            type="tel"
-                            id="phone"
-                            placeholder="Enter your phone number"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
+                        <div className="mb-4">
+                            <label className="block text-lg font-semibold mb-2 text-white" htmlFor="phone">Phone Number:</label>
+                            <input
+                                className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                type="tel"
+                                id="phone"
+                                placeholder="Enter your phone number"
+                                value={formData.phone}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-                    <div className="mb-4">
-                        <label className="block text-lg font-semibold mb-2 text-white" htmlFor="message">Description of Project:</label>
-                        <textarea
-                            className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            id="message"
-                            placeholder="Describe your project"
-                            rows="4"
-                            value={formData.message}
-                            onChange={handleChange}
-                            required
-                        ></textarea>
-                    </div>
+                        <div className="mb-4">
+                            <label className="block text-lg font-semibold mb-2 text-white" htmlFor="message">Description of Project:</label>
+                            <textarea
+                                className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="message"
+                                placeholder="Describe your project"
+                                rows="4"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                            ></textarea>
+                        </div>
 
-                    <div className="mb-4">
-                        <label className="block text-lg font-semibold mb-2 text-white" htmlFor="availability">Time of Availability:</label>
-                        <input
-                            className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            type="text"
-                            id="availability"
-                            placeholder="Enter your available time"
-                            value={formData.availability}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
+                        <div className="mb-4">
+                            <label className="block text-lg font-semibold mb-2 text-white" htmlFor="availability">Time of Availability:</label>
+                            <input
+                                className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                type="text"
+                                id="availability"
+                                placeholder="Enter your available time"
+                                value={formData.availability}
+                                onChange={handleChange}
+                                required
+                            />
+                        </div>
 
-                    <div className="mb-4">
-                        <label className="block text-lg font-semibold mb-2 text-white" htmlFor="contactMethod">Preferred Contact Method:</label>
-                        <select
-                            className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            id="contactMethod"
-                            value={formData.contactMethod}
-                            onChange={handleChange}
-                            required
+                        <div className="mb-4">
+                            <label className="block text-lg font-semibold mb-2 text-white" htmlFor="contactMethod">Preferred Contact Method:</label>
+                            <select
+                                className="w-full px-3 py-2 bg-gray-700 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="contactMethod"
+                                value={formData.contactMethod}
+                                onChange={handleChange}
+                                required
+                            >
+                                <option value="">Select a contact method</option>
+                                <option value="phone">Phone</option>
+                                <option value="email">Email</option>
+                                <option value="text">Text message</option>
+                            </select>
+                        </div>
+
+                        <button
+                            className="w-full bg-yellow-400 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition duration-300 focus:ring-2 focus:ring-blue-500"
+                            type="submit"
                         >
-                            <option value="">Select a contact method</option>
-                            <option value="phone">Phone</option>
-                            <option value="email">Email</option>
-                            <option value="text">Text message</option>
-                        </select>
-                    </div>
-
-                    <button
-                        className="w-full bg-yellow-400 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition duration-300 focus:ring-2 focus:ring-blue-500"
-                        type="submit"
-                    >
-                        Submit
-                    </button>
-                </form>
+                            Submit
+                        </button>
+                    </form>
+                </div>
             )}
         </div>
     );
