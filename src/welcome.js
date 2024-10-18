@@ -124,15 +124,13 @@ const Welcome = () => {
             {/* Form Overlay */}
             {isFormVisible && (
                 <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-70 z-50">
-                    <div
-                        className="bg-black rounded-lg p-8 w-full h-auto overflow-y-auto relative"
-                    >
+                    <div className="bg-black rounded-lg p-8 w-full h-auto overflow-y-auto relative m-4"> {/* Add margin to the overlay */}
                         {/* Close button (X) */}
                         <button
                             onClick={() => setFormVisible(false)}
-                            className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 transition duration-300"
+                            className="absolute top-4 right-4 text-gray-600 hover:text-gray-800 transition duration-300 p-2" // Add padding
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24"
                                  stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
                                       d="M6 18L18 6M6 6l12 12"/>
@@ -141,7 +139,6 @@ const Welcome = () => {
 
                         {/* Form content */}
                         <Form/>
-
                     </div>
                 </div>
             )}
