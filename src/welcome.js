@@ -20,7 +20,7 @@ const Welcome = () => {
             {/* Main Section */}
             <div className="text-center p-6 bg-black bg-opacity-90 rounded-lg shadow-lg max-w-6xl mt-20 sm:mt-40 mx-auto sm:px-12">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-red-500 mb-4">
-                    Wed <span className="line-through decoration-yellow-500">developers</span> designers.
+                    Web <span className="line-through decoration-yellow-500">developers</span> designers.
                 </h1>
                 <div className="text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-400 mb-4">
                     Book, Consult, Hosted, 72 hours
