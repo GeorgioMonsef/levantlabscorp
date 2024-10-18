@@ -24,7 +24,6 @@ const Form = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Define the template parameters for EmailJS
         const templateParams = {
             from_name: `${formData.firstName} ${formData.lastName}`,
             user_email: formData.email,
@@ -45,7 +44,7 @@ const Form = () => {
     };
 
     return (
-        <div className="w-full p-8 bg-black rounded-lg m-4">
+        <div className="w-full max-w-lg mx-auto p-4 sm:p-8 bg-black rounded-lg m-4">
             <h2 className="text-3xl font-bold mb-6 text-white text-center">Book a Consultation</h2>
 
             {submitted ? (
